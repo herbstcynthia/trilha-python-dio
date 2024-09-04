@@ -21,8 +21,8 @@ while True:
         valor = float(input("Informe o valor do depósito: "))
 
         if valor > 0:
-            saldo += valor
-            extrato += f"Depósito: R$ {valor:.2f}\n"
+            saldo = saldo + valor
+            extrato = extrato + f"Depósito: R$ {valor:.2f}\n"
 
         else:
             print("Operação falhou! O valor informado é inválido.")
@@ -48,7 +48,7 @@ while True:
         elif valor > 0:
             saldo -= valor
             extrato += f"Saque: R$ {valor:.2f}\n"
-            numero_saques += 1
+            numero_saques = numero_saques + 1
 
         else:
             print("Operação falhou! O valor informado é inválido.")
@@ -63,4 +63,4 @@ while True:
         break
 
     else:
-        print("Operação inválida, por favor selecione novamente a operação desejada.")
+        print("Operação inválida, selecione novamente a operação desejada.")
